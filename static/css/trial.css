@@ -1,0 +1,65 @@
+@import url('../css/reset.css');
+.container {
+  width: 100%;
+  height: 500px;
+  max-width: 950px;
+  margin: 2em auto 0 auto;
+  border: 1px solid #999;
+}
+
+.nav{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.nav li{
+  margin-right: 1em;
+}
+
+.nav li:last-child{
+  margin-right: 0;
+}
+
+.nav li a{
+  color: black;
+}
+
+.container-ul{
+  border-bottom: 1px solid #999;
+}
+
+.postTop{
+  padding: 0 6em;
+}
+
+.postTopUl{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.postBodyUl li{
+  border-top: 1px solid #999;
+}
+
+.postBodyUl li div{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em 7em 0.8em 6em;
+}
+
+.postBodyUl .postTitle a {
+  color: aqua;
+}
+
+.postBodyUl .postTitle:hover a {
+  color: black;
+}

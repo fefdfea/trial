@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/sign_up.css">
+  <title>로그인</title>
+</head>
+<body>
+  <div class="container">
+    <div class="submitBox">
+      <div class="titleBox">회원가입</div>
+      <div class="submitForm">
+        <form action="/sign_up/signUp_info" method="post" class="submitFormTag">
+          <input type="email" id="email" class="input" name="email" placeholder="이메일">
+          <input type="password" id="pw" class="input" name="pw" placeholder="비밀번호">
+          <input type="text" id="name" class="input" name="name"  placeholder="사용자의 이름">
+          <button type="submit" class="submitBtn button">회원가입</button>
+          <button type="button" class="submitBtn button" id="main">메인으로</button>
+        </form> 
+      </div>
+    </div>
+  </div>
+  <script src="../js/sign_up.js"></script>
+</body>
+</html>

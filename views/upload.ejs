@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/upload.css">
   <title>Document</title>
 </head>
+
 <body>
-  <form action="/videoRoute/upload" method="POST" enctype="multipart/form-data">
-    <input type="file" name="video">
-    <button type="submit">전송</button>
-  </form>
+  <div class="container">
+    <header class="header">
+      <nav>
+        <ul class="nav">
+          <li><a href="/login/logout">로그아웃</a></li>
+          <li><a href="/trial">재판하기</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="center">
+          <div class="padding_box">
+            <form action="/requestForTrial/upload" method="POST" enctype="multipart/form-data">
+              <div class="input_box">
+                <div class="leftBox">
+                <input type="file" id="upFile" class="upfile" name="video" onchange="videoSet(event);">
+                <label for="upFile" class="upFileLabel">비디오 업로드<br><span>(50MB 이하만 가능합니다)</span></label>
+                <div class="imgContainer"></div>
+              </div>
+              <div class="rightBox">
+                <input type="text" class="textArea" id="title" name="title" maxlength="20" placeholder="상황을 대략 짐작해 볼 수 있는 제목을 입력해 주십시오 (최대 20자)">
+                <span class="editInfo Info">문자와 숫자만 입력 가능합니다.</span>
+                <textarea class="textArea" id="desc" name="desc" maxlength="100" placeholder="당시의 상황을 간단히 입력해 주십시오(최대100자)"></textarea>
+                <span class="editInfo2 Info">문자와 숫자만 입력 가능합니다.</span>
+              </div>
+              </div>
+                <button type="submit" class="submit">제출</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    function videoSet(event) {
+      const imgBox = document.querySelector('.imgContainer');
+      const videoArea = document.querySelector('.upFileLabel');
+      const videoSum = document.createElement("video");
+      const source = document.createElement('source');
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        videoSum.appendChild(source);
+        videoSum.setAttribute("controls", "controls");
+        source.setAttribute('src', event.target.result)
+        imgBox.appendChild(videoSum);
+        videoArea.style.display = 'none';
+        imgBox.style.display = 'block';
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
   <script src="../js/upload.js"></script>
 </body>
+
 </html>

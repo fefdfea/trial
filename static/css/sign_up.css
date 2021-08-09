@@ -1,0 +1,78 @@
+@import url('../css/reset.css');
+
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebeaf2;
+}
+
+.submitBox{
+  width: 50%;
+  background-color: #fff;
+  padding-bottom: 3em;
+}
+
+.titleBox{
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #999;
+}
+
+.submitFormTag{
+  display: flex;
+  flex-direction: column;
+  padding: 0 8em;
+}
+
+.submitFormTag input{
+  margin-top: 1.2em;
+  padding: 14px 0;
+  font-size: 1.2rem;
+}
+
+.submitFormTag input:first-child{
+  margin-top: 0;
+}
+
+.submitBtn{
+  margin-top: 1.5em;
+  padding: 14px 0;  
+}
+
+
+@media screen and (max-width:960px) {
+  .titleBox{
+    font-size: 3rem;
+  }
+
+  .submitFormTag{
+    padding: 0 3em;
+  }
+  
+  .submitFormTag input{
+    font-size: 1rem;
+  }
+  
+}
+
+@media screen and (max-width:490px) {
+  .titleBox{
+    font-size: 2.5rem;
+  }
+
+  .submitBox{
+    width: 80%;
+  }
+
+  .submitFormTag input{
+    font-size: 0.7rem;
+  }
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/trial.css">
+  <title>재판소</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="/sign_in">로그인</a></li>
+        <li><a href="/">메인으로</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <main>
+      <div class="container">
+        <ul class="container-ul">
+          <li class="postTop">
+            <ul class="postTopUl">
+              <li class="postLeft">게시물</li>
+              <li class="postRight">투표수</li>
+            </ul>
+          </li>
+          <li class="postBody">
+            <ul class="postBodyUl">
+              <% for(let i =0; i < data.length; i++){ %>
+              <li>
+                <div>
+                  <h2 class="postTitle"><a href="/post/<%= i + 1%>"><%= data[i].postTitle %></a></h2>
+                  <span class="vote"><%= data[i].votes %></span>
+                </div>
+              </li>
+              <% } %>
+            </ul>
+          </li>
+          <li class="postBottom"></li>
+        </ul>
+      </div>
+    </main>
+  </section>
+  <script src="../js/trial.js"></script>
+</body>
+</html>

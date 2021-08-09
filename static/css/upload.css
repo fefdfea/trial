@@ -1,0 +1,196 @@
+@charset "UTF-8";
+@import url('./reset.css');
+
+.nav {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 6em;
+  box-sizing: border-box;
+}
+
+.nav li {
+  margin-right: 1em;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+.nav li a {
+  color: black;
+  padding: 0 0.7em;
+}
+
+.center{
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+
+.padding_box {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 6em;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.upfile{
+  display: none;
+}
+
+.input_box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.upFileLabel{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: #999;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.upFileLabel span{
+  color:thistle;
+}
+
+.imgContainer{
+  width: 300px;
+  height: 300px;
+  display: none;
+}
+
+.leftBox{
+  width: 50%;
+  height: 100%;
+}
+
+.rightBox{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.rightBox .textArea{
+  padding: 1.2em 0;
+  margin-bottom: 0.3em;
+}
+
+.rightBox .textArea:last-child{
+  margin-bottom: 0em;
+}
+
+.Info{
+  opacity: 0;
+  display: none;
+  transition: 0.5s ease;
+  margin-bottom: 1em;
+  color: red;
+  font-size: 0.8rem;
+}
+
+#desc{
+  height: 100px;
+  resize: none;
+}
+
+.editInfo2{
+  margin-bottom: 0;
+}
+
+.editInfo.opacityUp{
+  animation: opacityFadeUp 0.5s forwards;
+}
+
+.editInfo2.opacityUp{
+  animation: opacityFadeUp 0.5s forwards;
+}
+
+.submit{
+  width: 100%;
+  padding: 1em 0;
+  cursor: pointer;
+  border: 0;
+  margin-top: 2em;
+}
+
+.submit:hover{
+  background-color:darkgrey;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 960px) {
+  .input_box{
+    flex-direction: column;
+  }
+
+  .padding_box{
+    margin: 2em auto 0 auto;
+  }
+
+  .leftBox{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .upFileLabel{
+    width: 100%;
+  }
+
+  .imgContainer{
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .rightBox{
+    width: 100%;
+  }
+
+  .textArea{
+    width: 100%;
+  }
+
+  .submit{
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav{
+    padding: 0 0.3em;
+  }
+  .padding_box{
+    padding: 1em;
+  }
+
+}
+
+
+@keyframes opacityFadeUp {
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}

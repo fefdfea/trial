@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/sign_in.css">
+  <title>로그인</title>
+</head>
+<body>
+  <div class="container">
+    <div class="loginBox">
+      <div class="titleBox">로그인</div>
+      <div class="loginForm">
+        <form action="/sign_in/send_info" class="loginFormTag">
+          <input type="email" name="ID" id="id" placeholder="이메일 주소를 입력해 주십시오">
+          <input type="password" name="pw" id="pw" placeholder="패스워드를 입력해 주십시오">
+          <button type="submit" class="loginBtn button" id="login">로그인</button>
+          <button type="button" class="loginBtn button"  id="mainBtn">메인으로</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../js/sign_in.js"></script>
+</body>
+</html>

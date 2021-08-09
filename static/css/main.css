@@ -1,0 +1,197 @@
+@charset "UTF-8";
+@import url('./reset.css');
+
+.header{
+  width: 100%;
+}
+
+.nav{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.nav li a{
+  color: black;
+  padding: 0 1em;
+}
+
+
+.centerBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainTitle{
+  font-size: 5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 2em;
+  opacity: 0;
+  animation: 1s transitionY forwards;
+}
+
+.main_btnBox{
+  margin-bottom: 3em;
+  opacity: 0;
+  animation: 1s 0.6s transitionY forwards;
+}
+
+.main_btnBox .button{
+  font-size: 2rem;
+  background-color:transparent;
+  padding: 15px 25px;
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+
+.main_btnBox .button a{
+  color: #999;
+}
+
+.main_btnBox .button:hover{
+  background-color: #999;
+  transition: 0.5s;
+}
+
+.main_btnBox .button:hover a{
+  color: black;
+  transition: 0.5s;
+}
+
+
+.main_btnBox .button a{
+  cursor: pointer;
+}
+
+.main_btnBox .button:last-child{
+  margin-right: 0;
+}
+
+.first{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.first::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../img/hammer-719068_1920.jpg') no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(2px);
+}
+
+.second{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.second::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('../img/anubhav-rana-x2LStfRm7g0-unsplash.jpg') no-repeat center;
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.desc{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 14em;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.desc h2{
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: black;
+}
+
+.desc p{
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 940px) {
+  .desc h2{
+    font-size: 2.4rem;
+  }
+
+  .desc p{
+    font-size: 1.7rem;
+  }
+
+  .desc{
+    padding: 0 6em
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .mainTitle{
+    font-size: 3rem;
+  }
+
+  .main_btnBox{
+    text-align: center;
+  }
+
+  .main_btnBox .button{
+    width: 100%;
+    padding: 5px 0;
+    margin-top: 0.4em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .desc{
+    padding: 0 4em;
+  }
+}
+
+@keyframes transitionY{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
